@@ -1,0 +1,53 @@
+{
+  "name": "zillow-webpack",
+  "version": "1.0.0",
+  "description": "Zillow Webpack Challange",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "NODE_ENV=dev npx webpack",
+    "analyze:dev": "npx webpack-dev-server --config config/webpack.analyze.js",
+    "server:dev": "npx webpack-dev-server --config config/webpack.dev.js --progress --profile --watch ",
+    "build:prod": "npx webpack --config ./config/webpack.prod.js",
+    "server:prod": "npx http-server dist --cors --proxy http://localhost:8080/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cantux/zillow-webpack.git"
+  },
+  "keywords": [],
+  "author": "cantux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cantux/zillow-webpack/issues"
+  },
+  "homepage": "https://github.com/cantux/zillow-webpack#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "json-loader": "^0.5.7",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "scss": "^0.2.4",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.12.0",
+    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^3.0.3",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
